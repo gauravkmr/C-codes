@@ -1,0 +1,52 @@
+Problem Statement:
+The Byteland (City of Programmers) has organized a racing game. All participants in the race start from the given start point S and reach to the given target point T. 
+Certain points on the race track have flags. During the race all participants has to collect at least one flag from those flag points. Alice is also participating in the race. 
+She somehow managed to get the information about the locations of the flag points and the possible target point. She needs your help to figure out the length of the 
+shortest possible route from the starting point to the target point via at least one of the flag points. There are N points (indexed 0 to N-1) on the racetrack and M roads
+joining some of them. Each road on the race track joins two points. Each road are of different length. All the roads are one way roads (To avoid accidents during race)
+(i.e. A road from node X to Y can not be used to run from Y to X). However there might be several roads joining any two points on the race track.
+Help Alice by giving shortest possible route length for the given start and target points.
+
+Input:
+First line of the input contains four space separated integers N, M, F, S .
+Next M lines of the input contains description of the roads. Each line has three space separated integers i , j and c. Denoting a road from point i to point j having cost c.
+Next line contains F space separated integers denoting the locations of flag points.
+Next line contains an integer P denoting number of possible target points.
+Next P lines contains a possible target point T.
+
+Output:
+Print P lines for each of the possible target T, the length of the shortest path from S to T via at least one flag point.
+Constraints:
+3 <= N <= 1000
+2 <= M <= 100000 (105)
+1 <= F <= N-2
+0 <= i, j, S, T <= N-1
+0 <= c <= 1000000000000 (1012)
+1 <= P <= 100
+
+There will be at least one route satisfying given criteria (From S to T via at least one flag point).
+Start point will not be a flag point.
+Target point may be a flag point.
+
+Sample Input:
+5 12 2 0
+0 1 10
+0 2 5
+1 3 1
+1 2 2
+2 1 3
+2 1 5
+2 3 9
+2 4 2
+3 4 4
+3 4 8
+4 3 6
+4 0 7
+1 3
+2
+4
+2
+
+Sample Output:
+12
+10
